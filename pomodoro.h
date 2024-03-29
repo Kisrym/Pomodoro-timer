@@ -29,6 +29,7 @@ private slots:
 
     void labelUpdate(int seconds);
     void progressUpdate(int seconds, int workDuration);
+    //void sessionLabelUpdate(unsigned int state);
 
     void pause_resume();
     void workFinished();
@@ -42,5 +43,7 @@ private:
     void saveJsonFile(const QJsonDocument &doc, const QString &filePath);
     void loadData();
 
+    int sessionsWork;
+    int sessionsBreak;
 };
 #endif // POMODORO_H

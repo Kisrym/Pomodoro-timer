@@ -15,12 +15,14 @@ public:
     void stop();
     void pause();
     void resume();
+    void changeRemainingTimeTest(QString value);
 
 private slots:
     void timerTimeout();
 
 signals:
     void timeUpdated(int seconds, int workDuration);
+    void sessionUpdated(unsigned int state);
     void workFinished();
 
 private:

@@ -5,6 +5,8 @@ Pomodoro::Pomodoro(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::Pomodoro)
     , isPaused(false)
+    , sessionsWork(0)
+    , sessionsBreak(0)
 {
     ui->setupUi(this);
     ui->skip_pauses->setCheckable(false);
@@ -15,6 +17,13 @@ Pomodoro::Pomodoro(QWidget *parent)
     connect(ui->time, &QLineEdit::editingFinished, this, &Pomodoro::time_changed);
     connect(ui->start_pomodoro, &QPushButton::clicked, this, &Pomodoro::start_pomodoro);
     connect(ui->meta_diaria, &QLineEdit::editingFinished, this, &Pomodoro::metaDiariaUpdate);
+    connect(ui->skip_pauses, &QCheckBox::clicked, this, [=](bool checked){
+        if (checked) {
+            ui->label_interval->setText("Você não terá pausas");
+            return;
+        }
+        this->time_changed();
+    });
 
     connect(&pomodoro_timer, &PomodoroTimer::timeUpdated, this, &Pomodoro::labelUpdate);
     connect(&pomodoro_timer, &PomodoroTimer::timeUpdated, this, &Pomodoro::progressUpdate);
@@ -28,7 +37,12 @@ Pomodoro::Pomodoro(QWidget *parent)
     connect(ui->sub_btn, &QPushButton::clicked, this, [=]{ui->time->setText(QString::number(ui->time->text().toInt() - 10));time_changed();}); // subtraindo 10 minutos
 
     connect(&pomodoro_timer, &PomodoroTimer::workFinished, this, &Pomodoro::workFinished);
+    //connect(&pomodoro_timer, &PomodoroTimer::sessionUpdated, this, &Pomodoro::sessionLabelUpdate);
 
+
+
+
+    connect(ui->lineEdit, &QLineEdit::textChanged, &pomodoro_timer, &PomodoroTimer::changeRemainingTimeTest);
 }
 
 Pomodoro::~Pomodoro()
@@ -97,9 +111,11 @@ void Pomodoro::pause_resume() {
     if (isPaused) {
         pomodoro_timer.resume();
         isPaused = false;
+        ui->pause_btn->setIcon(QIcon(":/icons/pause.png"));
         return;
     }
     pomodoro_timer.pause();
+    ui->pause_btn->setIcon(QIcon(":/icons/play.png"));
     isPaused = true;
 }
 
@@ -128,12 +144,15 @@ void Pomodoro::time_changed() { // muda os valores de label/progress bar
 
 void Pomodoro::start_pomodoro() {
     bool skip = false;
-    if (ui->skip_pauses->isChecked() || (time / 30) >= 1) {
+    if (ui->skip_pauses->isChecked() || (time / 30) < 1) {
         skip = true;
     }
 
+    qDebug() << time;
+
     pomodoro_timer.start(time * 60, skip);
     qDebug() << "Iniciando pomodoro";
+    qDebug() << skip;
     ui->stackedWidget->setCurrentWidget(ui->page_2);
 }
 
@@ -157,3 +176,12 @@ void Pomodoro::workFinished() {
 void Pomodoro::metaDiariaUpdate() {
     ui->progressBar->setMaximum(ui->meta_diaria->text().toInt() * 60);
 }
+/*
+void Pomodoro::sessionLabelUpdate(unsigned int state) {
+    switch (state) {
+    case 0:
+        sessionsWork += 1;
+        ui->session_label->setText("Período de foco ")
+    }
+}
+*/
