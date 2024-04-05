@@ -23,6 +23,7 @@ void PomodoroTimer::start(int totalTime, bool skip_pauses) {
     currentState = Work;
     remainingTime = workDuration * 60;
     timer.start(1000); // Inicia o temporizador para atualizar a cada segundo
+    emit sessionUpdated(Work);
 }
 
 void PomodoroTimer::stop() {

@@ -1,0 +1,12 @@
+/home/kaio/Desktop/Storage/site-blocker/site-blockerAPI/target/release/deps/libcookie-5700734aac47d24d.rmeta: /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/lib.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/builder.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/parse.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/jar.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/delta.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/draft.rs
+
+/home/kaio/Desktop/Storage/site-blocker/site-blockerAPI/target/release/deps/libcookie-5700734aac47d24d.rlib: /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/lib.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/builder.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/parse.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/jar.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/delta.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/draft.rs
+
+/home/kaio/Desktop/Storage/site-blocker/site-blockerAPI/target/release/deps/cookie-5700734aac47d24d.d: /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/lib.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/builder.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/parse.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/jar.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/delta.rs /home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/draft.rs
+
+/home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/lib.rs:
+/home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/builder.rs:
+/home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/parse.rs:
+/home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/jar.rs:
+/home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/delta.rs:
+/home/kaio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/cookie-0.11.5/src/draft.rs:

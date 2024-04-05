@@ -26,7 +26,7 @@ signals:
     void workFinished();
 
 private:
-    enum State {Work, Break};
+    enum State {Break, Work};
     QTimer timer;
     int workDuration;
     int breakDuration;

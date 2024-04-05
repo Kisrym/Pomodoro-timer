@@ -17,6 +17,9 @@ set(PROJECT_SOURCES
         pomodoro.cpp
         pomodoro.h
         pomodoro.ui
+
+        release/block_sites
+
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
